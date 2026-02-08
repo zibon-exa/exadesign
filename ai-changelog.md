@@ -10,3 +10,4 @@
 - Added fixed header: logo left, Apply Now button right; button scrolls to #apply section
 - Added placeholder CTA below How to Apply bullet points; removed placeholder text
 - Added favicon: logos/exa-logomark-default.svg
+- Added Microsoft Clarity analytics script (project ID: ve238d1yfm)
