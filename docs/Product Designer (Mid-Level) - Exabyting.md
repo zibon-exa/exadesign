@@ -1,12 +1,10 @@
-### Job Title:
-
 # Product Designer
 
-| Location | Dhaka |
+| Location | Dhaka (On-site) |
 | ----: | :---- |
 | Employment Type | Full-time |
 | Seniority Level | Intermediate to Mid-Level |
-| Work Schedule | 5 Working days, 2 days off |
+| Work Schedule | Sun–Thu, 5 working days |
 | Reporting To | Senior Product Designer / Design Lead |
 
 ## About Exabyting
@@ -16,8 +14,6 @@ Exabyting is a technology and services company based in Dhaka, working with loca
 We operate with small, cross-functional teams where designers, engineers, and product stakeholders work closely from problem definition to delivery. We value clear communication, practical decision-making, and taking responsibility for the quality of what we ship.
 
 At Exabyting, we focus on sustainable work practices rather than hype. We invest in our people, expect ownership within defined scopes, and provide guidance and support so teams can do good work consistently and grow over time.
-
-## 
 
 ## What We Offer
 
@@ -48,8 +44,6 @@ At Exabyting, we focus on sustainable work practices rather than hype. We invest
 * Voluntary employee clubs, including biking, blogging, and sports groups  
 
 * Internal workshops and knowledge-sharing sessions for continuous learning and professional growth
-
-## 
 
 ## Qualities We Care About
 
@@ -88,7 +82,7 @@ This role is designed for designers who are responsible for execution, while rec
 
 ## Requirements
 
-* 2 – 4 years of professional experience as a Product, UX, or UI Designer  
+* 2–4 years of professional experience as a Product, UX, or UI Designer  
 
 * A portfolio demonstrating clear problem-solving, thoughtful UI decisions, and end-to-end execution  
 
@@ -101,11 +95,9 @@ This role is designed for designers who are responsible for execution, while rec
 
 ## How to Apply
 
-\[CTA with Typeform link will be added later\]
-
 Please apply with:
 
-* Your updated resume    
 * A link to your portfolio (required)
+* Your updated resume (optional)
 
 Shortlisted candidates will be contacted for the next steps.  

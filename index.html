@@ -14,11 +14,13 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "ve238d1yfm");
   </script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
   <style>
     :root {
       --text: #333;
       --text-muted: #555;
       --accent: #008DFF;
+      --icon-accent: #c2410c;
       --bg: #fafafa;
       --border: #e5e5e5;
     }
@@ -30,10 +32,11 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      font-size: 17px;
-      line-height: 1.6;
+      font-size: 1.0625rem;
+      line-height: 1.7;
       color: var(--text);
       background: var(--bg);
+      -webkit-font-smoothing: antialiased;
     }
 
     .fixed-header {
@@ -69,16 +72,48 @@
       opacity: 0.9;
     }
 
+    .apply-btn,
+    .apply-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .apply-btn .icon,
+    .apply-cta .icon {
+      width: 1rem;
+      height: 1rem;
+      flex-shrink: 0;
+    }
+
+    .meta-row .icon {
+      flex-shrink: 0;
+      width: 1.125rem;
+      height: 1.125rem;
+      color: var(--text-muted);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-header .icon {
+      flex-shrink: 0;
+      width: 1.25rem;
+      height: 1.25rem;
+      color: var(--icon-accent);
+    }
+
     .container {
-      max-width: 680px;
+      max-width: 65ch;
       margin: 0 auto;
       padding: calc(64px + 3rem) 1.5rem 3rem;
     }
 
     header {
       margin-bottom: 3rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid var(--border);
     }
 
     .logo {
@@ -97,10 +132,11 @@
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 3rem;
       font-weight: 700;
-      margin: 2.5rem 0 0.5rem;
+      margin: 0 0 0.5rem;
       letter-spacing: -0.02em;
+      line-height: 1.25;
     }
 
     .meta {
@@ -113,6 +149,7 @@
 
     .meta-row {
       display: flex;
+      align-items: center;
       gap: 0.5rem;
     }
 
@@ -123,38 +160,76 @@
     }
 
     h2 {
-      font-size: 1.25rem;
+      font-size: 1.4375rem;
       font-weight: 600;
-      margin: 2.5rem 0 1rem;
+      margin: 3.5rem 0 1.25rem;
+      padding-bottom: 0.875rem;
       color: var(--text);
+      line-height: 1.3;
+      text-wrap: balance;
+      border-bottom: 1px solid var(--border);
     }
 
     h3 {
-      font-size: 1.1rem;
+      font-size: 1.25rem;
       font-weight: 600;
-      margin: 2rem 0 0.75rem;
+      margin: 2.75rem 0 0.875rem;
+      padding-bottom: 0.875rem;
       color: var(--text);
+      line-height: 1.35;
+      text-wrap: balance;
+      border-bottom: 1px solid var(--border);
     }
 
     p {
-      margin: 0 0 1rem;
+      margin: 0 0 1.25rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
     }
 
     ul {
-      margin: 0 0 1rem;
-      padding-left: 1.25rem;
+      margin: 0 0 1.25rem;
+      padding-left: 1.5rem;
     }
 
     li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.65;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    .icon-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .icon-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.625rem;
+    }
+
+    .icon-list .li-icon {
+      flex-shrink: 0;
+      width: 1.125rem;
+      height: 1.125rem;
+      margin-top: 0.25rem;
+      color: #999;
     }
 
     .subsection {
       margin-top: 1.5rem;
     }
 
-    .cta-placeholder {
-      display: inline-block;
+    .apply-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
       padding: 0.75rem 1.5rem;
       background: var(--accent);
       color: white;
@@ -165,7 +240,7 @@
       margin: 1rem 0;
     }
 
-    .cta-placeholder:hover {
+    .apply-cta:hover {
       opacity: 0.9;
     }
 
@@ -181,99 +256,104 @@
     <a href="/" class="logo" aria-label="Exabyting">
       <img src="logos/logo_full_horizontal.svg" alt="Exabyting">
     </a>
-    <a href="https://exabyting.typeform.com/PD" class="apply-btn" target="_blank" rel="noopener">Apply Now</a>
+    <a href="https://exabyting.typeform.com/PD" class="apply-btn" target="_blank" rel="noopener">Apply Now<i data-lucide="arrow-right" class="icon" aria-hidden="true"></i></a>
   </nav>
 
   <div class="container">
     <header>
       <h1>Product Designer</h1>
       <div class="meta">
-        <div class="meta-row"><span class="meta-label">Location</span> Dhaka</div>
-        <div class="meta-row"><span class="meta-label">Employment Type</span> Full-time</div>
-        <div class="meta-row"><span class="meta-label">Seniority Level</span> Intermediate to Mid-Level</div>
-        <div class="meta-row"><span class="meta-label">Work Schedule</span> 5 working days, 2 days off</div>
-        <div class="meta-row"><span class="meta-label">Reporting To</span> Senior Product Designer / Design Lead</div>
+        <div class="meta-row"><i data-lucide="map-pin" class="icon" aria-hidden="true"></i><span class="meta-label">Location</span> Dhaka (On-site)</div>
+        <div class="meta-row"><i data-lucide="briefcase" class="icon" aria-hidden="true"></i><span class="meta-label">Employment Type</span> Full-time</div>
+        <div class="meta-row"><i data-lucide="gauge" class="icon" aria-hidden="true"></i><span class="meta-label">Seniority Level</span> Intermediate to Mid-Level</div>
+        <div class="meta-row"><i data-lucide="calendar" class="icon" aria-hidden="true"></i><span class="meta-label">Work Schedule</span> Sun–Thu, 5 working days</div>
+        <div class="meta-row"><i data-lucide="users" class="icon" aria-hidden="true"></i><span class="meta-label">Reporting To</span> Senior Product Designer / Design Lead</div>
       </div>
     </header>
 
     <section>
-      <h2>About Exabyting</h2>
+      <h2 class="section-header"><i data-lucide="building-2" class="icon" aria-hidden="true"></i>About Exabyting</h2>
       <p>Exabyting is a technology and services company based in Dhaka, working with local and international clients to design, build, and scale digital products. Our work spans software development, product engineering, quality assurance, and UX design, supporting businesses across multiple industries.</p>
       <p>We operate with small, cross-functional teams where designers, engineers, and product stakeholders work closely from problem definition to delivery. We value clear communication, practical decision-making, and taking responsibility for the quality of what we ship.</p>
       <p>At Exabyting, we focus on sustainable work practices rather than hype. We invest in our people, expect ownership within defined scopes, and provide guidance and support so teams can do good work consistently and grow over time.</p>
     </section>
 
     <section>
-      <h2>What We Offer</h2>
-      <ul>
-        <li>Competitive salary, paid on time</li>
-        <li>Comprehensive health care coverage, including monthly medical allowances for you and your family</li>
-        <li>Company-provided employee dormitory accommodation, located close to the workplace</li>
-        <li>Fully subsidized meals, including breakfast, lunch, and snacks; complimentary dining for dormitory residents</li>
-        <li>Workspace setup budget to purchase necessary equipment, tools, and supplies</li>
-        <li>Mobile recharge and internet package support covering you, your family, parents, in-laws, and grandparents</li>
-        <li>Child allowance to support employees with children</li>
-        <li>Company transport facilities covering daily commutes within the Dhaka Metropolitan area</li>
-        <li>Access to a 0% interest loan from day one</li>
-        <li>Two festival bonuses</li>
-        <li>Company-sponsored official tours and team outings (family included)</li>
+      <h2 class="section-header"><i data-lucide="gift" class="icon" aria-hidden="true"></i>What We Offer</h2>
+      <ul class="icon-list">
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Competitive salary, paid on time</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Comprehensive health care coverage, including monthly medical allowances for you and your family</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Company-provided employee dormitory accommodation, located close to the workplace</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Fully subsidized meals, including breakfast, lunch, and snacks; complimentary dining for dormitory residents</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Workspace setup budget to purchase necessary equipment, tools, and supplies</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Mobile recharge and internet package support covering you, your family, parents, in-laws, and grandparents</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Child allowance to support employees with children</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Company transport facilities covering daily commutes within the Dhaka Metropolitan area</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Access to a 0% interest loan from day one</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Two festival bonuses</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Company-sponsored official tours and team outings (family included)</li>
       </ul>
 
-      <h3>Community & Growth</h3>
-      <ul>
-        <li>Voluntary employee clubs, including biking, blogging, and sports groups</li>
-        <li>Internal workshops and knowledge-sharing sessions for continuous learning and professional growth</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Qualities We Care About</h2>
-      <ul>
-        <li>A collaborative team player who works well under guidance and contributes to shared outcomes</li>
-        <li>Honest, transparent, and willing to take responsibility for their work</li>
-        <li>Comfortable owning assigned tasks and seeing them through end-to-end</li>
-        <li>Respectful communicator who gives and receives feedback professionally</li>
-        <li>Proactive within their scope, raising issues and suggesting improvements when appropriate</li>
-        <li>Efficient and organized, open to using tools or automation to work smarter</li>
+      <h3 class="section-header"><i data-lucide="sparkles" class="icon" aria-hidden="true"></i>Community & Growth</h3>
+      <ul class="icon-list">
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Voluntary employee clubs, including biking, blogging, and sports groups</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Internal workshops and knowledge-sharing sessions for continuous learning and professional growth</li>
       </ul>
     </section>
 
     <section>
-      <h2>What You'll Do</h2>
-      <ul>
-        <li>Understand client briefs and work closely with senior designers or product leads to clarify requirements and constraints</li>
-        <li>Translate requirements into user flows, wireframes, and UI designs with guidance and regular feedback</li>
-        <li>Design high-fidelity, responsive interfaces in Figma using components, auto-layout, and established design patterns</li>
-        <li>Apply and follow existing design systems; contribute incremental improvements when appropriate</li>
-        <li>Present design work, explain design rationale, and iterate based on feedback from senior designers and stakeholders</li>
-        <li>Create functional prototypes in Figma; experience with advanced or AI-assisted prototyping tools is a plus</li>
-        <li>Prepare clean, production-ready design handoffs and collaborate with developers during implementation</li>
-        <li>Participate in design QA to help ensure designs are shipped accurately and as intended</li>
+      <h2 class="section-header"><i data-lucide="heart" class="icon" aria-hidden="true"></i>Qualities We Care About</h2>
+      <ul class="icon-list">
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>A collaborative team player who works well under guidance and contributes to shared outcomes</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Honest, transparent, and willing to take responsibility for their work</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Comfortable owning assigned tasks and seeing them through end-to-end</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Respectful communicator who gives and receives feedback professionally</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Proactive within their scope, raising issues and suggesting improvements when appropriate</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Efficient and organized, open to using tools or automation to work smarter</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="section-header"><i data-lucide="list-checks" class="icon" aria-hidden="true"></i>What You'll Do</h2>
+      <ul class="icon-list">
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Understand client briefs and work closely with senior designers or product leads to clarify requirements and constraints</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Translate requirements into user flows, wireframes, and UI designs with guidance and regular feedback</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Design high-fidelity, responsive interfaces in Figma using components, auto-layout, and established design patterns</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Apply and follow existing design systems; contribute incremental improvements when appropriate</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Present design work, explain design rationale, and iterate based on feedback from senior designers and stakeholders</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Create functional prototypes in Figma; experience with advanced or AI-assisted prototyping tools is a plus</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Prepare clean, production-ready design handoffs and collaborate with developers during implementation</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Participate in design QA to help ensure designs are shipped accurately and as intended</li>
       </ul>
       <p>This role is designed for designers who are responsible for execution, while receiving direction, feedback, and mentorship from senior team members.</p>
     </section>
 
     <section>
-      <h2>Requirements</h2>
-      <ul>
-        <li>2 – 4 years of professional experience as a Product, UX, or UI Designer</li>
-        <li>A portfolio demonstrating clear problem-solving, thoughtful UI decisions, and end-to-end execution</li>
-        <li>Hands-on experience working with existing design systems and reusable components</li>
-        <li>Foundational understanding of user research and usability testing principles (hands-on research experience is a plus, not a requirement)</li>
-        <li>Willingness to learn, seek feedback, and continuously improve skills and ways of working</li>
+      <h2 class="section-header"><i data-lucide="check-circle" class="icon" aria-hidden="true"></i>Requirements</h2>
+      <ul class="icon-list">
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>2–4 years of professional experience as a Product, UX, or UI Designer</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>A portfolio demonstrating clear problem-solving, thoughtful UI decisions, and end-to-end execution</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Hands-on experience working with existing design systems and reusable components</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Foundational understanding of user research and usability testing principles (hands-on research experience is a plus, not a requirement)</li>
+        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Willingness to learn, seek feedback, and continuously improve skills and ways of working</li>
       </ul>
     </section>
 
     <section id="apply">
-      <h2>How to Apply</h2>
+      <h2 class="section-header"><i data-lucide="send" class="icon" aria-hidden="true"></i>How to Apply</h2>
       <p>Please apply with:</p>
-      <ul>
-        <li>Your updated resume</li>
-        <li>A link to your portfolio (required)</li>
+      <ul class="icon-list">
+        <li><i data-lucide="link" class="icon li-icon" aria-hidden="true"></i>A link to your portfolio (required)</li>
+        <li><i data-lucide="file-text" class="icon li-icon" aria-hidden="true"></i>Your updated resume (optional)</li>
       </ul>
       <p class="closing">Shortlisted candidates will be contacted for the next steps.</p>
-      <a href="https://exabyting.typeform.com/PD" class="cta-placeholder" target="_blank" rel="noopener">Apply Now</a>
+      <a href="https://exabyting.typeform.com/PD" class="apply-cta" target="_blank" rel="noopener">Apply Now<i data-lucide="arrow-right" class="icon" aria-hidden="true"></i></a>
     </section>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    });
+  </script>
 </body>
 </html>
