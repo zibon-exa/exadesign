@@ -1,5 +1,10 @@
 # AI Changelog
 
+## 2026-02-08 16:40:00 (CSS Extraction)
+
+- Extracted all CSS from inline `<style>` block in `index.html` into separate `style.css` file
+- Replaced inline styles with `<link rel="stylesheet" href="style.css">`
+
 ## 2026-02-08 16:30:00 (Offers & Community Card Grids)
 
 - Converted "What We Offer" (11 items) from bullet list to 3-column card grid with colorful icons and short titles
