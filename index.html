@@ -15,7 +15,7 @@
       --text: #333;
       --text-muted: #555;
       --accent: #008DFF;
-      --icon-accent: #c2410c;
+      --icon-accent: #34d399;
       --bg: #fafafa;
       --border: #e5e5e5;
     }
@@ -221,6 +221,53 @@
       margin-top: 1.5rem;
     }
 
+    .qualities-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .quality-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+      background: #fff;
+    }
+
+    .quality-card .card-icon {
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .quality-card .card-title {
+      font-family: 'General Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.375rem;
+      color: var(--text);
+    }
+
+    .quality-card .card-desc {
+      font-size: 0.875rem;
+      line-height: 1.55;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    @media (max-width: 680px) {
+      .qualities-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 440px) {
+      .qualities-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .apply-cta {
       display: inline-flex;
       align-items: center;
@@ -331,37 +378,113 @@
 
     <section>
       <h2 class="section-header"><i data-lucide="gift" class="icon" aria-hidden="true"></i>What We Offer</h2>
-      <ul class="icon-list">
-        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Competitive salary, paid on time</li>
-        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Comprehensive health care coverage, including monthly medical allowances for you and your family</li>
-        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Company-provided employee dormitory accommodation, located close to the workplace</li>
-        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Fully subsidized meals, including breakfast, lunch, and snacks; complimentary dining for dormitory residents</li>
-        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Workspace setup budget to purchase necessary equipment, tools, and supplies</li>
-        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Mobile recharge and internet package support covering you, your family, parents, in-laws, and grandparents</li>
-        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Child allowance to support employees with children</li>
-        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Company transport facilities covering daily commutes within the Dhaka Metropolitan area</li>
-        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Access to a 0% interest loan from day one</li>
-        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Two festival bonuses</li>
-        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Company-sponsored official tours and team outings (family included)</li>
-      </ul>
+      <div class="qualities-grid">
+        <div class="quality-card">
+          <i data-lucide="banknote" class="card-icon" style="color:#10b981;" aria-hidden="true"></i>
+          <div class="card-title">Competitive Salary</div>
+          <p class="card-desc">Competitive salary, paid on time.</p>
+        </div>
+        <div class="quality-card">
+          <i data-lucide="heart-pulse" class="card-icon" style="color:#f43f5e;" aria-hidden="true"></i>
+          <div class="card-title">Health Coverage</div>
+          <p class="card-desc">Comprehensive health care coverage, including monthly medical allowances for you and your family.</p>
+        </div>
+        <div class="quality-card">
+          <i data-lucide="home" class="card-icon" style="color:#3b82f6;" aria-hidden="true"></i>
+          <div class="card-title">Accommodation</div>
+          <p class="card-desc">Company-provided employee dormitory accommodation, located close to the workplace.</p>
+        </div>
+        <div class="quality-card">
+          <i data-lucide="utensils" class="card-icon" style="color:#f59e0b;" aria-hidden="true"></i>
+          <div class="card-title">Free Meals</div>
+          <p class="card-desc">Fully subsidized meals, including breakfast, lunch, and snacks; complimentary dining for dormitory residents.</p>
+        </div>
+        <div class="quality-card">
+          <i data-lucide="laptop" class="card-icon" style="color:#8b5cf6;" aria-hidden="true"></i>
+          <div class="card-title">Setup Budget</div>
+          <p class="card-desc">Workspace setup budget to purchase necessary equipment, tools, and supplies.</p>
+        </div>
+        <div class="quality-card">
+          <i data-lucide="wifi" class="card-icon" style="color:#06b6d4;" aria-hidden="true"></i>
+          <div class="card-title">Connectivity</div>
+          <p class="card-desc">Mobile recharge and internet package support covering you, your family, parents, in-laws, and grandparents.</p>
+        </div>
+        <div class="quality-card">
+          <i data-lucide="baby" class="card-icon" style="color:#ec4899;" aria-hidden="true"></i>
+          <div class="card-title">Child Allowance</div>
+          <p class="card-desc">Child allowance to support employees with children.</p>
+        </div>
+        <div class="quality-card">
+          <i data-lucide="bus" class="card-icon" style="color:#6366f1;" aria-hidden="true"></i>
+          <div class="card-title">Transport</div>
+          <p class="card-desc">Company transport facilities covering daily commutes within the Dhaka Metropolitan area.</p>
+        </div>
+        <div class="quality-card">
+          <i data-lucide="landmark" class="card-icon" style="color:#059669;" aria-hidden="true"></i>
+          <div class="card-title">Interest-Free Loan</div>
+          <p class="card-desc">Access to a 0% interest loan from day one.</p>
+        </div>
+        <div class="quality-card">
+          <i data-lucide="star" class="card-icon" style="color:#f97316;" aria-hidden="true"></i>
+          <div class="card-title">Festival Bonuses</div>
+          <p class="card-desc">Two festival bonuses.</p>
+        </div>
+        <div class="quality-card">
+          <i data-lucide="plane" class="card-icon" style="color:#0ea5e9;" aria-hidden="true"></i>
+          <div class="card-title">Team Outings</div>
+          <p class="card-desc">Company-sponsored official tours and team outings (family included).</p>
+        </div>
+      </div>
 
       <h3 class="section-header"><i data-lucide="sparkles" class="icon" aria-hidden="true"></i>Community & Growth</h3>
-      <ul class="icon-list">
-        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Voluntary employee clubs, including biking, blogging, and sports groups</li>
-        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Internal workshops and knowledge-sharing sessions for continuous learning and professional growth</li>
-      </ul>
+      <div class="qualities-grid">
+        <div class="quality-card">
+          <i data-lucide="trophy" class="card-icon" style="color:#3b82f6;" aria-hidden="true"></i>
+          <div class="card-title">Employee Clubs</div>
+          <p class="card-desc">Voluntary employee clubs, including biking, blogging, and sports groups.</p>
+        </div>
+        <div class="quality-card">
+          <i data-lucide="graduation-cap" class="card-icon" style="color:#8b5cf6;" aria-hidden="true"></i>
+          <div class="card-title">Learning & Growth</div>
+          <p class="card-desc">Internal workshops and knowledge-sharing sessions for continuous learning and professional growth.</p>
+        </div>
+      </div>
     </section>
 
     <section>
       <h2 class="section-header"><i data-lucide="heart" class="icon" aria-hidden="true"></i>Qualities We Care About</h2>
-      <ul class="icon-list">
-        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>A collaborative team player who works well under guidance and contributes to shared outcomes</li>
-        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Honest, transparent, and willing to take responsibility for their work</li>
-        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Comfortable owning assigned tasks and seeing them through end-to-end</li>
-        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Respectful communicator who gives and receives feedback professionally</li>
-        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Proactive within their scope, raising issues and suggesting improvements when appropriate</li>
-        <li><i data-lucide="circle-check" class="icon li-icon" aria-hidden="true"></i>Efficient and organized, open to using tools or automation to work smarter</li>
-      </ul>
+      <div class="qualities-grid">
+        <div class="quality-card">
+          <i data-lucide="users" class="card-icon" style="color:#3b82f6;" aria-hidden="true"></i>
+          <div class="card-title">Team Player</div>
+          <p class="card-desc">A collaborative team player who works well under guidance and contributes to shared outcomes.</p>
+        </div>
+        <div class="quality-card">
+          <i data-lucide="shield-check" class="card-icon" style="color:#10b981;" aria-hidden="true"></i>
+          <div class="card-title">Integrity</div>
+          <p class="card-desc">Honest, transparent, and willing to take responsibility for their work.</p>
+        </div>
+        <div class="quality-card">
+          <i data-lucide="target" class="card-icon" style="color:#f59e0b;" aria-hidden="true"></i>
+          <div class="card-title">Ownership</div>
+          <p class="card-desc">Comfortable owning assigned tasks and seeing them through end-to-end.</p>
+        </div>
+        <div class="quality-card">
+          <i data-lucide="message-circle" class="card-icon" style="color:#8b5cf6;" aria-hidden="true"></i>
+          <div class="card-title">Communication</div>
+          <p class="card-desc">Respectful communicator who gives and receives feedback professionally.</p>
+        </div>
+        <div class="quality-card">
+          <i data-lucide="lightbulb" class="card-icon" style="color:#f43f5e;" aria-hidden="true"></i>
+          <div class="card-title">Proactive</div>
+          <p class="card-desc">Proactive within their scope, raising issues and suggesting improvements when appropriate.</p>
+        </div>
+        <div class="quality-card">
+          <i data-lucide="zap" class="card-icon" style="color:#06b6d4;" aria-hidden="true"></i>
+          <div class="card-title">Efficiency</div>
+          <p class="card-desc">Efficient and organized, open to using tools or automation to work smarter.</p>
+        </div>
+      </div>
     </section>
 
     <section>
@@ -395,7 +518,7 @@
       <p>Please apply with:</p>
       <ul class="icon-list">
         <li><i data-lucide="link" class="icon li-icon" aria-hidden="true"></i>A link to your portfolio (required)</li>
-        <li><i data-lucide="file-text" class="icon li-icon" aria-hidden="true"></i>Your updated resume (optional)</li>
+        <li><i data-lucide="file-text" class="icon li-icon" aria-hidden="true"></i>Your updated resume</li>
       </ul>
       <p class="closing">Shortlisted candidates will be contacted for the next steps.</p>
       <a href="https://exabyting.typeform.com/PD" class="apply-cta" target="_blank" rel="noopener noreferrer">Apply Now<i data-lucide="arrow-right" class="icon" aria-hidden="true"></i></a>

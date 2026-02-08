@@ -1,5 +1,22 @@
 # AI Changelog
 
+## 2026-02-08 16:30:00 (Offers & Community Card Grids)
+
+- Converted "What We Offer" (11 items) from bullet list to 3-column card grid with colorful icons and short titles
+- Converted "Community & Growth" (2 items) from bullet list to card grid with colorful icons and short titles
+- Reuses same `.qualities-grid` / `.quality-card` styles from Qualities section
+
+## 2026-02-08 16:20:00 (Qualities Section Redesign)
+
+- Replaced "Qualities We Care About" bullet list with a 3x2 card grid layout
+- Each card has a colorful Lucide icon, short bold title, and description
+- Cards: Team Player (blue), Integrity (emerald), Ownership (amber), Communication (violet), Initiative (rose), Efficiency (cyan)
+- Responsive: collapses to 2-column at 680px and single-column at 440px
+
+## 2026-02-08 16:10:00 (UI Tweak)
+
+- Changed section header icon color (`--icon-accent`) from orange/red (`#c2410c`) to mint (`#34d399`)
+
 ## 2026-02-08 16:00:00 (Security Hardening)
 
 - Added Content Security Policy (CSP) via `<meta>` tag — restricts script, style, font, image, and connect sources to known domains only; blocks framing (clickjacking) via `frame-ancestors 'none'`
