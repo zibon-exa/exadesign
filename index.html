@@ -3,18 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://www.clarity.ms https://*.clarity.ms; style-src 'self' 'unsafe-inline' https://api.fontshare.com https://fonts.googleapis.com; font-src https://cdn.fontshare.com https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://*.clarity.ms; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self';">
   <link rel="icon" type="image/svg+xml" href="logos/exa-logomark-default.svg">
   <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <title>Product Designer – Exabyting</title>
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "ve238d1yfm");
-  </script>
-  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <!-- Clarity analytics loaded via consent banner (see bottom of page) -->
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js" integrity="sha384-ieG+IKD0d/ZPXyCBTMVAbqsQdns8QGJR/e26WMw7M4fkaI/rHcS/YIoi+ah9WGge" crossorigin="anonymous"></script>
   <style>
     :root {
       --text: #333;
@@ -249,6 +244,62 @@
       font-size: 0.95rem;
       color: var(--text-muted);
     }
+    .consent-banner {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border-top: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+      z-index: 200;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .consent-inner {
+      max-width: 65ch;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .consent-banner p {
+      margin: 0;
+    }
+
+    .consent-banner a {
+      color: var(--accent);
+    }
+
+    .consent-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .consent-btn {
+      padding: 0.375rem 1rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .consent-btn-accept {
+      background: var(--accent);
+      color: white;
+    }
+
+    .consent-btn-decline {
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
   </style>
 </head>
 <body>
@@ -256,7 +307,7 @@
     <a href="/" class="logo" aria-label="Exabyting">
       <img src="logos/logo_full_horizontal.svg" alt="Exabyting">
     </a>
-    <a href="https://exabyting.typeform.com/PD" class="apply-btn" target="_blank" rel="noopener">Apply Now<i data-lucide="arrow-right" class="icon" aria-hidden="true"></i></a>
+    <a href="https://exabyting.typeform.com/PD" class="apply-btn" target="_blank" rel="noopener noreferrer">Apply Now<i data-lucide="arrow-right" class="icon" aria-hidden="true"></i></a>
   </nav>
 
   <div class="container">
@@ -347,12 +398,48 @@
         <li><i data-lucide="file-text" class="icon li-icon" aria-hidden="true"></i>Your updated resume (optional)</li>
       </ul>
       <p class="closing">Shortlisted candidates will be contacted for the next steps.</p>
-      <a href="https://exabyting.typeform.com/PD" class="apply-cta" target="_blank" rel="noopener">Apply Now<i data-lucide="arrow-right" class="icon" aria-hidden="true"></i></a>
+      <a href="https://exabyting.typeform.com/PD" class="apply-cta" target="_blank" rel="noopener noreferrer">Apply Now<i data-lucide="arrow-right" class="icon" aria-hidden="true"></i></a>
     </section>
   </div>
+  <div id="cookie-consent" class="consent-banner">
+    <div class="consent-inner">
+      <p>This site uses cookies for analytics via Microsoft Clarity. <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener noreferrer">Privacy Policy</a></p>
+      <div class="consent-actions">
+        <button class="consent-btn consent-btn-accept" onclick="acceptAnalytics()">Accept</button>
+        <button class="consent-btn consent-btn-decline" onclick="declineAnalytics()">Decline</button>
+      </div>
+    </div>
+  </div>
+
   <script>
+    function loadClarity() {
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "ve238d1yfm");
+    }
+
+    function acceptAnalytics() {
+      localStorage.setItem('analytics-consent', 'accepted');
+      document.getElementById('cookie-consent').style.display = 'none';
+      loadClarity();
+    }
+
+    function declineAnalytics() {
+      localStorage.setItem('analytics-consent', 'declined');
+      document.getElementById('cookie-consent').style.display = 'none';
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
       if (typeof lucide !== 'undefined') lucide.createIcons();
+
+      var consent = localStorage.getItem('analytics-consent');
+      if (consent === 'accepted') {
+        loadClarity();
+      } else if (!consent) {
+        document.getElementById('cookie-consent').style.display = 'block';
+      }
     });
   </script>
 </body>

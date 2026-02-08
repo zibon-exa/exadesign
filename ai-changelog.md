@@ -1,5 +1,14 @@
 # AI Changelog
 
+## 2026-02-08 16:00:00 (Security Hardening)
+
+- Added Content Security Policy (CSP) via `<meta>` tag — restricts script, style, font, image, and connect sources to known domains only; blocks framing (clickjacking) via `frame-ancestors 'none'`
+- Added Subresource Integrity (SRI) hash (`sha384`) and `crossorigin="anonymous"` to Lucide CDN script to prevent supply-chain tampering
+- Changed `rel="noopener"` to `rel="noopener noreferrer"` on both external Typeform links to prevent Referer header leakage
+- Created `_headers` file for Netlify with security headers: `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin`, `Permissions-Policy`, `Strict-Transport-Security` (HSTS with preload)
+- Added GDPR cookie consent banner for Microsoft Clarity — analytics now loads only after explicit user acceptance; preference stored in `localStorage`
+- Moved Clarity script from unconditional head load to consent-gated dynamic injection
+
 ## 2025-02-08 (Single-page JD site)
 
 - Created `index.html` – single-page job description site for Product Designer role at Exabyting
