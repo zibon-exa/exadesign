@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="logos/exa-logomark-default.svg">
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>Product Designer – Exabyting</title>
+  <style>
+    :root {
+      --text: #333;
+      --text-muted: #555;
+      --accent: #008DFF;
+      --bg: #fafafa;
+      --border: #e5e5e5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .fixed-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+    }
+
+    .fixed-header .logo {
+      height: 32px;
+    }
+
+    .apply-btn {
+      padding: 0.5rem 1.25rem;
+      background: var(--accent);
+      color: white;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .apply-btn:hover {
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: calc(64px + 3rem) 1.5rem 3rem;
+    }
+
+    header {
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      display: block;
+      height: 36px;
+      width: auto;
+    }
+
+    .logo img {
+      height: 100%;
+      width: auto;
+    }
+
+    h1, h2, h3 {
+      font-family: 'General Sans', sans-serif;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 2.5rem 0 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .meta {
+      display: grid;
+      gap: 0.5rem 2rem;
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .meta-row {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .meta-label {
+      font-weight: 500;
+      color: var(--text);
+      min-width: 10rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 2.5rem 0 1rem;
+      color: var(--text);
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 2rem 0 0.75rem;
+      color: var(--text);
+    }
+
+    p {
+      margin: 0 0 1rem;
+    }
+
+    ul {
+      margin: 0 0 1rem;
+      padding-left: 1.25rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .subsection {
+      margin-top: 1.5rem;
+    }
+
+    .cta-placeholder {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--accent);
+      color: white;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border-radius: 6px;
+      margin: 1rem 0;
+    }
+
+    .cta-placeholder:hover {
+      opacity: 0.9;
+    }
+
+    .closing {
+      margin-top: 2rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <nav class="fixed-header">
+    <a href="/" class="logo" aria-label="Exabyting">
+      <img src="logos/logo_full_horizontal.svg" alt="Exabyting">
+    </a>
+    <a href="#apply" class="apply-btn">Apply Now</a>
+  </nav>
+
+  <div class="container">
+    <header>
+      <h1>Product Designer</h1>
+      <div class="meta">
+        <div class="meta-row"><span class="meta-label">Location</span> Dhaka</div>
+        <div class="meta-row"><span class="meta-label">Employment Type</span> Full-time</div>
+        <div class="meta-row"><span class="meta-label">Seniority Level</span> Intermediate to Mid-Level</div>
+        <div class="meta-row"><span class="meta-label">Work Schedule</span> 5 working days, 2 days off</div>
+        <div class="meta-row"><span class="meta-label">Reporting To</span> Senior Product Designer / Design Lead</div>
+      </div>
+    </header>
+
+    <section>
+      <h2>About Exabyting</h2>
+      <p>Exabyting is a technology and services company based in Dhaka, working with local and international clients to design, build, and scale digital products. Our work spans software development, product engineering, quality assurance, and UX design, supporting businesses across multiple industries.</p>
+      <p>We operate with small, cross-functional teams where designers, engineers, and product stakeholders work closely from problem definition to delivery. We value clear communication, practical decision-making, and taking responsibility for the quality of what we ship.</p>
+      <p>At Exabyting, we focus on sustainable work practices rather than hype. We invest in our people, expect ownership within defined scopes, and provide guidance and support so teams can do good work consistently and grow over time.</p>
+    </section>
+
+    <section>
+      <h2>What We Offer</h2>
+      <ul>
+        <li>Competitive salary, paid on time</li>
+        <li>Comprehensive health care coverage, including monthly medical allowances for you and your family</li>
+        <li>Company-provided employee dormitory accommodation, located close to the workplace</li>
+        <li>Fully subsidized meals, including breakfast, lunch, and snacks; complimentary dining for dormitory residents</li>
+        <li>Workspace setup budget to purchase necessary equipment, tools, and supplies</li>
+        <li>Mobile recharge and internet package support covering you, your family, parents, in-laws, and grandparents</li>
+        <li>Child allowance to support employees with children</li>
+        <li>Company transport facilities covering daily commutes within the Dhaka Metropolitan area</li>
+        <li>Access to a 0% interest loan from day one</li>
+        <li>Two festival bonuses</li>
+        <li>Company-sponsored official tours and team outings (family included)</li>
+      </ul>
+
+      <h3>Community & Growth</h3>
+      <ul>
+        <li>Voluntary employee clubs, including biking, blogging, and sports groups</li>
+        <li>Internal workshops and knowledge-sharing sessions for continuous learning and professional growth</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Qualities We Care About</h2>
+      <ul>
+        <li>A collaborative team player who works well under guidance and contributes to shared outcomes</li>
+        <li>Honest, transparent, and willing to take responsibility for their work</li>
+        <li>Comfortable owning assigned tasks and seeing them through end-to-end</li>
+        <li>Respectful communicator who gives and receives feedback professionally</li>
+        <li>Proactive within their scope, raising issues and suggesting improvements when appropriate</li>
+        <li>Efficient and organized, open to using tools or automation to work smarter</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>What You'll Do</h2>
+      <ul>
+        <li>Understand client briefs and work closely with senior designers or product leads to clarify requirements and constraints</li>
+        <li>Translate requirements into user flows, wireframes, and UI designs with guidance and regular feedback</li>
+        <li>Design high-fidelity, responsive interfaces in Figma using components, auto-layout, and established design patterns</li>
+        <li>Apply and follow existing design systems; contribute incremental improvements when appropriate</li>
+        <li>Present design work, explain design rationale, and iterate based on feedback from senior designers and stakeholders</li>
+        <li>Create functional prototypes in Figma; experience with advanced or AI-assisted prototyping tools is a plus</li>
+        <li>Prepare clean, production-ready design handoffs and collaborate with developers during implementation</li>
+        <li>Participate in design QA to help ensure designs are shipped accurately and as intended</li>
+      </ul>
+      <p>This role is designed for designers who are responsible for execution, while receiving direction, feedback, and mentorship from senior team members.</p>
+    </section>
+
+    <section>
+      <h2>Requirements</h2>
+      <ul>
+        <li>2 – 4 years of professional experience as a Product, UX, or UI Designer</li>
+        <li>A portfolio demonstrating clear problem-solving, thoughtful UI decisions, and end-to-end execution</li>
+        <li>Hands-on experience working with existing design systems and reusable components</li>
+        <li>Foundational understanding of user research and usability testing principles (hands-on research experience is a plus, not a requirement)</li>
+        <li>Willingness to learn, seek feedback, and continuously improve skills and ways of working</li>
+      </ul>
+    </section>
+
+    <section id="apply">
+      <h2>How to Apply</h2>
+      <p>Please apply with:</p>
+      <ul>
+        <li>Your updated resume</li>
+        <li>A link to your portfolio (required)</li>
+      </ul>
+      <p class="closing">Shortlisted candidates will be contacted for the next steps.</p>
+      <a href="#" class="cta-placeholder">Apply Now</a>
+    </section>
+  </div>
+</body>
+</html>
