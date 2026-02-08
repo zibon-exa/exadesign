@@ -11,3 +11,4 @@
 - Added placeholder CTA below How to Apply bullet points; removed placeholder text
 - Added favicon: logos/exa-logomark-default.svg
 - Added Microsoft Clarity analytics script (project ID: ve238d1yfm)
+- Added Typeform links (https://exabyting.typeform.com/PD) to both Apply CTAs; open in new tab
