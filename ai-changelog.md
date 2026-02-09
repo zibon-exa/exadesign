@@ -1,5 +1,9 @@
 # AI Changelog
 
+## 2026-02-08 16:45:00 (CTA Link Update)
+
+- Updated both Apply Now CTA links from `https://exabyting.typeform.com/PD` to `https://exabyting.typeform.com/pd-feb-26`
+
 ## 2026-02-08 16:40:00 (CSS Extraction)
 
 - Extracted all CSS from inline `<style>` block in `index.html` into separate `style.css` file
