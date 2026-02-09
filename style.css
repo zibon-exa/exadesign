@@ -91,7 +91,7 @@ body {
 .container {
   max-width: 65ch;
   margin: 0 auto;
-  padding: calc(64px + 3rem) 1.5rem 3rem;
+  padding: calc(64px + 3rem) 1.5rem 10rem;
 }
 
 header {
@@ -99,7 +99,8 @@ header {
 }
 
 .logo {
-  display: block;
+  display: flex;
+  align-items: center;
   height: 36px;
   width: auto;
 }
@@ -107,6 +108,16 @@ header {
 .logo img {
   height: 100%;
   width: auto;
+}
+
+.logo-mark {
+  display: none;
+  min-height: 40px;
+}
+
+.apply-btn {
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 h1, h2, h3 {
@@ -246,6 +257,14 @@ li:last-child {
 @media (max-width: 680px) {
   .qualities-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .logo-full {
+    display: none;
+  }
+
+  .logo-mark {
+    display: block;
   }
 }
 

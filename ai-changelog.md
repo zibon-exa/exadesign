@@ -1,5 +1,11 @@
 # AI Changelog
 
+## 2026-02-08 16:50:00 (Mobile Header Fix)
+
+- Added logomark image (`exa-logomark-default.svg`) to header alongside full logo
+- At ≤680px: full logo hides, logomark shows
+- Apply Now button set to `white-space: nowrap; flex-shrink: 0` to stay fit-content on mobile
+
 ## 2026-02-08 16:45:00 (CTA Link Update)
 
 - Updated both Apply Now CTA links from `https://exabyting.typeform.com/PD` to `https://exabyting.typeform.com/pd-feb-26`
